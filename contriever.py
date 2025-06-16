@@ -52,4 +52,4 @@ if __name__ == "__main__":
                 rank += 1
                 f.write(f'{qid} Q0 {hit.docid} {rank} {hit.score} rank\n')
 
-    print(os.system(f"python -m pyserini.eval.trec_eval -c -m ndcg_cut.10 {THE_TOPICS[args.corpus_name.replace('_ft', '')]} {output_filename}"))
+    print(os.system(f"python -m pyserini.eval.trec_eval -c -m ndcg_cut.10 {THE_TOPICS[args.corpus_name]} {output_filename}"))
